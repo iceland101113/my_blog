@@ -1,0 +1,2 @@
+export const DRAFT_POST_LIST = 'DRAFT_POST_LIST';
+export const DRAFT_POST_DESTROY = 'DRAFT_POST_DESTROY';
