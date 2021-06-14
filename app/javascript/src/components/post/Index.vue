@@ -8,7 +8,7 @@
       <b-tabs content-class="mt-3">
         <b-tab title="Published" active>
           <b-table striped hover :items="published_posts" :fields="fields">
-            <template slot="fid" slot-scope="data">
+            <template v-slot:cell(fid)="data">
               <b-button variant="dark" @click="ShowPostClick(data)"><font-awesome-icon icon="eye"/></b-button>
               <b-button variant="primary" @click="UpdatePostClick(data)"><font-awesome-icon icon="pencil-alt"/></b-button>
               <b-button variant="danger" @click="DeletePostClick(data)"><font-awesome-icon icon="trash-alt" /></b-button>
@@ -17,7 +17,7 @@
         </b-tab>
         <b-tab title="Draft">
           <b-table striped hover :items="draft_posts" :fields="fields">
-            <template slot="fid" slot-scope="data">
+            <template v-slot:cell(fid)="data">
               <b-button variant="dark" @click="ShowPostClick(data)"><font-awesome-icon icon="eye"/></b-button>
               <b-button variant="primary" @click="UpdatePostClick(data)"><font-awesome-icon icon="pencil-alt"/></b-button>
               <b-button variant="danger" @click="DeletePostClick(data)"><font-awesome-icon icon="trash-alt" /></b-button>

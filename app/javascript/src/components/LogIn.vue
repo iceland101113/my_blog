@@ -39,7 +39,7 @@ export default {
         })
         .catch(err => {
           this.actionLogin(false)
-          console.error(err.response.data.errors);
+          console.error(err);
         });
     }
   }

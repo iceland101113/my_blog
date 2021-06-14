@@ -20,7 +20,7 @@
     </div>
     <div>
       <b-table striped hover :items="items" :fields="fields">
-        <template slot="fid" slot-scope="data">
+        <template v-slot:cell(fid)="data">
           <b-button variant="dark" @click="ShowPostClick(data)"><font-awesome-icon icon="eye"/></b-button>
         </template>
       </b-table>

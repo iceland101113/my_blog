@@ -8,10 +8,11 @@
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "^4.0.7",
+    "@rails/webpacker": "^5.3.0",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.28",
+    "node-sass": "^6.0.0",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.1",
@@ -21,7 +22,32 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@vue/test-utils": "^1.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.4",
     "jquery": "^3.4.1",
+    "vue-jest": "^3.0.7",
     "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/spec"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    },
+    "testEnvironment": "jsdom"
   }
 }
